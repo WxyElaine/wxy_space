@@ -49,6 +49,10 @@ body {
     color: white;
 }
 
+.navbar-default .navbar-brand:hover {
+    color: #ffd700;
+}
+
 .navbar-default .navbar-brand, .carousel-caption {
     font-size: 1.5em;
 }
