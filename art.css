@@ -1,0 +1,59 @@
+/*  
+    Xinyi Wang
+    06/29/17
+    Artwork  
+    This file is the stylesheet of the web page "My Artwork". 
+*/
+
+img {
+    margin: auto;   
+    width: 70%;
+}
+
+body {
+    background-color: #d3d3d3;
+    font-family: fantasy;
+}
+
+.jumbotron {
+    color: #9C6B98;
+    font-size: 4em;
+    text-align: center;
+}
+
+.carousel-caption {
+    border: 0;
+    bottom: 1px;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-shadow: none;
+}
+
+.reverse, .carousel-control {
+    color: black;
+}
+
+#back {
+    color: #f88379;
+    display: flex;
+    font-size: 1em;
+    justify-content: flex-end;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    text-decoration: none;
+}
+
+#back:hover {
+    color: #4242e4;
+}
+
+#theCarousel {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
