@@ -72,10 +72,21 @@ body {
 
 .navbar {
     background-color: #6b2b87;
-    padding: 0.2em;
     font-size: 1em;
+    padding: 0.2em;
 }
 
 .collapse {
     margin-right: 30px;
+}
+
+.subtitle {
+    font-size: 0.8em;
+    text-shadow: 2px 1px #ededed;
+}
+
+.unit {
+    line-height: 1.8em;
+    margin-bottom: 0.5em;
+    margin-top: 0.8em;
 }

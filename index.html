@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Xinyi's Portfolio</title>
+        <title>Xinyi&#39;s Portfolio</title>
         <link href="tiger.jpg" type="image/jpg" rel="shortcut icon" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -28,15 +28,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <div class="navbar-brand">Xinyi's Portfolio</div>
+                <div class="navbar-brand">Xinyi&#39;s Portfolio</div>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li class="nav-item">
-                        <a class="nav-link" id="link" href="#intro">Personal Information <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" id="link" href="#intro">Personal Information<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="link" href="#skills">Skills<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="link" href="#experience">Experience<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="link" href="#artwork">Artwork</a>
@@ -51,13 +59,37 @@
         <!--Personal Information-->
         <div class="jumbotron" id="intro">
             <h1>Xinyi Wang</h1>
-            <div class="uw">Freshman at the University of Washington</div>
-            <div class="uw">Come from Xi'an, Shaanxi, China</div>
+            <div class="unit">
+                <div class="uw">Bachelor of Science in Computer Science</div>
+                <div class="uw">University of Washington, Seattle</div>
+                <div class="uw subtitle">September 2016 ~ June 2020</div>
+            </div>
+            <div class="uw">Come from Xi&#39;an, Shaanxi, China</div>
+        </div>
+        
+        <!--Technical Skills-->
+        <div class="jumbotron" id="skills">
+            <h1>Technical Skills</h1>
+            <div class="unit">
+                <div class="uw">Java</div>
+                <div class="uw">HTML5, CSS, JavaScript, PHP, SQL</div>
+                <div class="uw">Swift</div>
+            </div>
+        </div>
+        
+        <!--Experience-->
+        <div class="jumbotron" id="experience">
+            <h1>Experience</h1>
+            <div class="unit">
+                <div class="uw">Website Maintenance, Xi&#39;an Gold Ribbon Childcare and Aid Center | Internship</div>
+                <div class="uw subtitle">July 2017 ~ September 2017; Xi&#39;an, Shaanxi, China</div>
+                <div class="uw subtitle">Update and maintain the website; fix bugs and redesign the style of the website</div>
+            </div>
         </div>
 
         <!--Artwork-->
         <div class="jumbotron" id="artwork">
-            <h1>Xinyi's Artwork</h1>
+            <h1>Xinyi&#39;s Artwork</h1>
        
             <div id="theCarousel" class="carousel slide">
                 <ol class="carousel-indicators">
@@ -66,13 +98,14 @@
                     <li data-target="#theCarousel" data-slide-to="2"></li> 
                     <li data-target="#theCarousel" data-slide-to="3"></li>
                     <li data-target="#theCarousel" data-slide-to="4"></li>
+                    <li data-target="#theCarousel" data-slide-to="5"></li>
                 </ol>
                 
                 <div class="carousel-inner">
                     <div class="item active">
                         <img src="blue.jpg" alt="Papercarving-Blue" />
                         <div class="carousel-caption reverse">
-                            <p>Paper Carving</p>
+                            <p>Papercarving</p>
                         </div>
                     </div>
                     <div class="item">
@@ -90,13 +123,19 @@
                     <div class="item">
                         <img src="BellTower.jpg" alt="Bell Tower" />
                         <div class="carousel-caption">
-                            <p>The Bell Tower in Xi'an</p>
+                            <p>The Bell Tower in Xi&#39;an</p>
                         </div>
                     </div>
                     <div class="item">
                         <img src="eye.jpg" alt="Sketch of Eye" />
                         <div class="carousel-caption">
                             <p>Sketch of Eye</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="green.jpg" alt="Papercarving" />
+                        <div class="carousel-caption">
+                            <p>Papercarving</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +152,7 @@
         <!--Contact Information-->
         <div class="jumbotron" id="contact">
             <h1>Contact</h1>
-            <div class="uw">Email: wangx227@uw.edu</div>
+            <div class="uw">Email: wxyelaine98@gmail.com</div>
         </div>
         
     </body>
