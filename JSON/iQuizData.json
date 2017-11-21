@@ -108,7 +108,7 @@
       "desc":"Check out the fun facts about Geography!",
       "questions":[
          {
-           "text":"___ of Earth's population lives in the Northern Hemisphere.\nBy Andrea Romano. \"12 geography facts that will blow your mind\". \"http:\/\/www.travelandleisure.com\/trip-ideas\/amazing-geography-facts\". May 13, 2017.",
+           "text":"___ of Earth's population lives in the Northern Hemisphere.",
            "answer":"2",
            "answers":[
              "80%",
@@ -118,7 +118,7 @@
            ]
          }
          {
-           "text":"Russia spans ___ time zones.\nBy Andrea Romano. \"12 geography facts that will blow your mind\". \"http:\/\/www.travelandleisure.com\/trip-ideas\/amazing-geography-facts\". May 13, 2017.",
+           "text":"Russia spans ___ time zones.",
            "answer":"3",
            "answers":[
              "10",
@@ -128,7 +128,7 @@
            ]
          }
          {
-           "text":"___ is the only continent that covers four hemispheres.\nBy Andrea Romano. \"12 geography facts that will blow your mind\". \"http:\/\/www.travelandleisure.com\/trip-ideas\/amazing-geography-facts\". May 13, 2017.",
+           "text":"___ is the only continent that covers four hemispheres.",
            "answer":"3",
            "answers":[
              "Australia",
