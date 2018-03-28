@@ -22,6 +22,5 @@
             this.carousel('next');
         });
         
-        document.addEventListener("contextmenu", event => event.preventDefault());
     };
 })();
