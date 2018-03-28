@@ -7,7 +7,7 @@
 
 img {
     margin: auto;   
-    width: 65%;
+    width: 60%;
 }
 
 body {
@@ -17,6 +17,10 @@ body {
     line-height: 2.8em;
     padding-top: 80px;
     text-align: center;
+}
+
+h3 {
+    color: #c0c5ff;
 }
 
 .uw {
