@@ -5,9 +5,15 @@
     This file is the stylesheet of the web page "Xinyi's Portfolio". 
 */
 
-img {
-    margin: auto;   
-    width: 60%;
+.carousel .item {
+    height: 500px;
+}
+
+.item img {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    width: 550px;
 }
 
 body {
@@ -23,25 +29,34 @@ body {
     text-shadow: 2px 1px #ffd700;
 }
 
+.me {
+    text-shadow: 2px 1px #fff3b2;
+}
+
 .jumbotron {
     background-color: white;
 }
 
+#name {
+    font-size: 3em;
+}
+
 .jumbotron h1 {
     color: #6b2b87;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .carousel-caption {
     border: 0;
     bottom: 1px;
+    color: #b2b2b2;
     margin: 0;
     padding: 0;
     text-align: left;
     text-shadow: none;
 }
 
-.reverse, .carousel-control {
+.carousel-control {
     color: black;
 }
 
@@ -91,10 +106,21 @@ body {
     margin-top: 0.8em;
 }
 
+.aboutme {
+    line-height: 1.8em;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+}
+
 #copyright {
+    font-size: 0.5em;
     color: #c0c5ff;
 }
 
-#firework {
-    width: 40%;
+.carousel-indicators li {
+    border-color: #b2b2b2;
+}
+
+.carousel-indicators .active {
+    background-color: #a6a6a6;
 }
