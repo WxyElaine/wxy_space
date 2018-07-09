@@ -11,7 +11,7 @@
 (function() {
     window.onload = function() {
         
-        // Yaer display
+        // Year display
         document.getElementById("year").textContent = (new Date()).getFullYear();
         
         // Animation for carousel swipe
