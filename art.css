@@ -124,3 +124,19 @@ body {
 .carousel-indicators .active {
     background-color: #a6a6a6;
 }
+
+#intropic {
+    margin-left: 0px;
+    margin-right: 20%;
+    max-width: 20%;
+}
+
+#introtext {
+    float: left;
+    margin-left: 20%;
+    margin-right: 0px;
+}
+
+#introcontainer {
+    margin-bottom: 5%;
+}
