@@ -126,8 +126,6 @@ body {
 }
 
 #intropic {
-    margin-left: 0px;
-    margin-right: 20%;
     max-width: 20%;
 }
 
@@ -137,6 +135,6 @@ body {
     margin-right: 0px;
 }
 
-#introcontainer {
-    margin-bottom: 5%;
+#intro {
+    overflow: hidden;
 }
