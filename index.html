@@ -9,11 +9,15 @@
 <html>
     <head>
         <title>Xinyi&#39;s Portfolio</title>
+        <!--For scaling on mobiles-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--jQuery & Bootstrap-->
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
                 integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--Customized stylesheets and js-->
         <link href="art.css" type="text/css" rel="stylesheet" />
         <script src="art.js" type="text/javascript"></script>
     </head>
@@ -22,7 +26,7 @@
         <!--Navigation Bar-->
         <div role="navigation" class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarcontent">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -33,9 +37,8 @@
                 <div class="navbar-brand">Xinyi&#39;s Portfolio</div>
             </div>
 
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbarcontent">
                 <ul class="nav navbar-nav navbar-right">
-                    
                     <li class="nav-item">
                         <a class="nav-link" id="link" href="#intro">Personal Information<span class="sr-only">(current)</span></a>
                     </li>
@@ -46,10 +49,10 @@
                         <a class="nav-link" id="link" href="#experience">Experience<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="link" href="#artwork">Artwork</a>
+                        <a class="nav-link" id="link" href="#artwork">Artwork<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="link" href="#contact">Contact</a>
+                        <a class="nav-link" id="link" href="#contact">Contact<span class="sr-only">(current)</span></a>
                     </li>                
                 </ul>  
             </div>
@@ -71,7 +74,7 @@
                         <div class="me">Loves: papercarving, painting, photography</div>
                     </div>
                 </div>
-                <img id="intropic" src="xinyi.jpg" alt="Picture of Xinyi" />
+                <img id="intropic" src="pic/xinyi.jpg" alt="Picture of Xinyi" />
             </div>
         </div>
         
@@ -79,13 +82,10 @@
         <div class="jumbotron" id="skills">
             <h1>Technical Skills</h1>
             <div class="unit">
-                <div class="uw">Java</div>
-                <div class="uw">Swift</div>
-                <div class="uw">C</div>
+                <div class="uw">Java, Swift, C</div>
                 <div class="uw">HTML5, CSS, JavaScript, PHP, SQL</div>
-                <div class="uw">Racket, Haskell, Prolog, Ruby</div>
-                <div class="uw">C++</div>
-                <div class="uw">Python</div>
+                <div class="uw">C++, Python</div>
+                <div class="uw">Solidworks</div>
             </div>
         </div>
         
@@ -130,127 +130,127 @@
                 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="blue.jpg" alt="Papercarving-Blue" />
+                        <img src="pic/blue.jpg" alt="Papercarving-Blue" />
                         <div class="carousel-caption">
                             <p>Papercarving</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="yellow.jpg" alt="Papercarving-Yellow" />
+                        <img src="pic/yellow.jpg" alt="Papercarving-Yellow" />
                         <div class="carousel-caption">
                             <p>Papercarving</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="red.jpg" alt="Papercarving-Red" />
+                        <img src="pic/red.jpg" alt="Papercarving-Red" />
                         <div class="carousel-caption">
                             <p>Papercarving</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="bell_tower.jpg" alt="Bell Tower" />
+                        <img src="pic/bell_tower.jpg" alt="Bell Tower" />
                         <div class="carousel-caption">
                             <p>The Bell Tower in Xi&#39;an</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="eye.jpg" alt="Sketch of Eye" />
+                        <img src="pic/eye.jpg" alt="Sketch of Eye" />
                         <div class="carousel-caption">
                             <p>Sketch of Eye</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="green.jpg" alt="Papercarving" />
+                        <img src="pic/green.jpg" alt="Papercarving" />
                         <div class="carousel-caption">
                             <p>Papercarving</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="cherry_blossom.jpg" alt="Cheery Blossom" />
+                        <img src="pic/cherry_blossom.jpg" alt="Cheery Blossom" />
                         <div class="carousel-caption">
                             <p>Cheery Blossom</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="beach_sunset.jpg" alt="Sunset at Hawaii" />
+                        <img src="pic/beach_sunset.jpg" alt="Sunset at Hawaii" />
                         <div class="carousel-caption">
                             <p>Sunset at Hawaii</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="boat.jpg" alt="Sailboat" />
+                        <img src="pic/boat.jpg" alt="Sailboat" />
                         <div class="carousel-caption">
                             <p>Sailboat</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="milky_way.jpg" alt="Milky Way Galaxy and I" />
+                        <img src="pic/milky_way.jpg" alt="Milky Way Galaxy and I" />
                         <div class="carousel-caption">
                             <p>Milky Way Galaxy and I</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="firework.jpg" alt="Firework"/>
+                        <img src="pic/firework.jpg" alt="Firework"/>
                         <div class="carousel-caption">
                             <p>Firework</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="dream_maid.jpg" alt="Dream Maid"/>
+                        <img src="pic/dream_maid.jpg" alt="Dream Maid"/>
                         <div class="carousel-caption">
                             <p>Dream Maid</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="petal.jpg" alt="Tulip Petal"/>
+                        <img src="pic/petal.jpg" alt="Tulip Petal"/>
                         <div class="carousel-caption">
                             <p>Petal</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="lake.jpg" alt="Namtso"/>
+                        <img src="pic/lake.jpg" alt="Namtso"/>
                         <div class="carousel-caption">
                             <p>Namtso</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="mountain.jpg" alt="Tibetan Plateau"/>
+                        <img src="pic/mountain.jpg" alt="Tibetan Plateau"/>
                         <div class="carousel-caption">
                             <p>Tibetan Plateau</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="sunset.jpg" alt="Sunset"/>
+                        <img src="pic/sunset.jpg" alt="Sunset"/>
                         <div class="carousel-caption">
                             <p>Sunset</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="star_1.jpg" alt="Starry Night"/>
+                        <img src="pic/star_1.jpg" alt="Starry Night"/>
                         <div class="carousel-caption">
                             <p>Starry Night</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="star_2.jpg" alt="Starry Night"/>
+                        <img src="pic/star_2.jpg" alt="Starry Night"/>
                         <div class="carousel-caption">
                             <p>Starry Night</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="star_3.jpg" alt="Starry Night"/>
+                        <img src="pic/star_3.jpg" alt="Starry Night"/>
                         <div class="carousel-caption">
                             <p>Starry Night</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="shadow.jpg" alt="Shadow"/>
+                        <img src="pic/shadow.jpg" alt="Shadow"/>
                         <div class="carousel-caption">
                             <p>Shadow</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="volunteer.jpg" alt="Volunteer Park"/>
+                        <img src="pic/volunteer.jpg" alt="Volunteer Park"/>
                         <div class="carousel-caption">
                             <p>Volunteer Park</p>
                         </div>
@@ -266,7 +266,7 @@
             </div>
             
             <h3 id="copyright">
-                Copyright &copy; 2015-<span id="year">2018</span>. Xinyi Wang. All Rights Reserved.
+                Copyright &copy; 2015-<span id="year">2019</span>. Xinyi Wang. All Rights Reserved.
             </h3>
         </div>
         

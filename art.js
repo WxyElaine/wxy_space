@@ -13,14 +13,6 @@
         
         // Year display
         document.getElementById("year").textContent = (new Date()).getFullYear();
-        
-        // Animation for carousel swipe
-        document.getElementsByClassName("carousel").swiperight(function() {
-            this.carousel('prev');
-        });
-        document.getElementsByClassName("carousel").swipeleft(function() {  
-            this.carousel('next');
-        });
-        
+   
     };
 })();

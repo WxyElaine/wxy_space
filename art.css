@@ -5,6 +5,17 @@
     This file is the stylesheet of the web page "Xinyi's Portfolio". 
 */
 
+/* Scale the webpage properly based on actual screen width */
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/* Main Style */
 .carousel .item {
     height: 500px;
 }
@@ -137,4 +148,70 @@ body {
 
 #intro {
     overflow: hidden;
+}
+
+/* Mobile Friendly Style */
+@media only screen and (device-width: 768px) {
+    .navbar-collapse li a {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-device-width: 1000px) {
+    body {
+        font-size: 2em;
+    }
+    
+    #name, .jumbotron h1 {
+        font-size: 2em;
+    }
+    
+    .collapse {
+        margin-right: 0;
+    }
+    
+    .navbar-toggle {
+        padding: 5px;
+    }
+    
+    .navbar-toggle .icon-bar+.icon-bar {
+        margin-top: 3px;
+    }
+    
+    #introtext {
+        float: none;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .carousel .item {
+        height: 300px; 
+    }
+    
+    #theCarousel {
+        line-height: 1em;
+        padding-top: 0;
+        padding-bottom: 0px;
+        height: 20em;
+    }
+    
+    .carousel-caption {
+        margin-top: 10px;
+        position: relative;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.5em;
+    }
+    
+    .carousel-inner {
+        height: 100%;
+    }
+    
+    .carousel-indicators li, .carousel-indicators .active {
+        width: 5px;
+        height: 5px;
+        margin: 0;
+    }
 }
