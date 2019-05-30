@@ -36,6 +36,11 @@ body {
     text-align: center;
 }
 
+.time {
+    text-shadow: none !important;
+    color: #808080;
+}
+
 .uw {
     text-shadow: 2px 1px #e0d9f7;
 }
@@ -151,6 +156,22 @@ body {
     overflow: hidden;
 }
 
+#experience .unit {
+    margin-bottom: 1.2em;
+}
+
+#experience .unit:last-of-type {
+    margin-bottom: 0;
+}
+
+.wide {
+    display: inline;
+}
+
+.narrow {
+    display: none;
+}
+
 /* Mobile Friendly Style */
 @media only screen and (device-width: 768px) {
     .navbar-collapse li a {
@@ -219,4 +240,13 @@ body {
     .jumbotron {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    .narrow {
+        display: inline;
+    }
 }
