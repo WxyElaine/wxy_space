@@ -137,7 +137,6 @@ body {
 }
 
 #intropic {
-    max-width: 20%;
     width: 200px;
     height: 200px;
 }
@@ -216,4 +215,8 @@ body {
         height: 5px;
         margin: 0;
     }
+    
+    .jumbotron {
+        padding-left: 1em;
+        padding-right: 1em;
 }
