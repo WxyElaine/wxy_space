@@ -37,11 +37,11 @@ body {
 }
 
 .uw {
-    text-shadow: 2px 1px #ffd700;
+    text-shadow: 2px 1px #e0d9f7;
 }
 
 .me {
-    text-shadow: 2px 1px #fff3b2;
+    text-shadow: 2px 1px #f2dede;
 }
 
 .jumbotron {
@@ -108,7 +108,7 @@ body {
 
 .subtitle {
     font-size: 0.8em;
-    text-shadow: 2px 1px #ededed;
+    /* text-shadow: 2px 1px #ededed; */
 }
 
 .unit {
