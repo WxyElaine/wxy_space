@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  padding-top: 40px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: white;
+}
+
+.jumbotron h2 {
+  color: #6b2b87;
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: #6b2b87;
+  font-size: 1em;
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #ffd700;
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 1.5em;
+}
+
+.navbar .active {
+  font-weight: bold;
+}
+
+/* Introduction cards */
+#name {
+  font-size: 2em;
+}
+
+#chineseName {
+  font-size: 0.8em;
+}
+
+.introCard {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.imgRef {
+  font-size: 0.7em;
+}
+
+.btn-purple {
+  background-color: #6b2b87;
+  color: white;
+}
+
+.btn-purple:hover {
+  background-color: #cdb8d7;
+}
+
+.introCardMask {
+  background: rgba(0,0,0,0.55);
+}
+
+#xinyiCardMask {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0) 30%);
+}
+
+/* Carousel */
+.carouselImg {
+  height: 50rem;
+  width: 100%;
+}
+
+.carousel-caption {
+  border: 0;
+  bottom: 1px;
+  color: #b2b2b2;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-shadow: none;
+}
+
+/* Contact */
+.contactLogo {
+  width: 3rem;
+}

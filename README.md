@@ -1,2 +1,4 @@
-# wxy_space
-This is a repo contain miscellaneous things, including my personal website.
+This is Xinyi Wang's personal website.
+[Click here to visit the website](https://wxyelaine.github.io/wxy_space/).
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
