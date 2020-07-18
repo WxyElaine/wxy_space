@@ -10,7 +10,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Carousel from 'react-bootstrap/Carousel';
 import Gallery from "react-photo-gallery";
 
 import './App.css';
@@ -113,81 +112,16 @@ function CV() {
 }
 
 function Artwork() {
-  // const papercuttingImgs = importAll(require.context('./pics/papercutting/', false, /\.(png|jpe?g|svg)$/));
-  // const papercuttingItems = papercuttingImgs.map(img => {
-  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
-  // });
-  // const photographyImgs = importAll(require.context('./pics/photography/', false, /\.(png|jpe?g|svg)$/));
-  // const photographyItems = photographyImgs.map(img => {
-  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
-  // });
-  // const paintingImgs = importAll(require.context('./pics/painting/', false, /\.(png|jpe?g|svg)$/));
-  // const paintingItems = paintingImgs.map(img => {
-  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
-  // });
   return (
     <Jumbotron id="artworks">
       <Container>
         <h2>Artwork</h2>
-        {/* <ArtworkCarousel id="papercutting" title="Paper-cutting & Paper-carving" items={papercuttingItems} /> */}
-        {/* <ArtworkCarousel id="photography" title="Photography" items={photographyItems} /> */}
-        {/* <ArtworkCarousel id="painting" title="Painting" items={paintingItems} /> */}
-
-        {/* <ArtworkTable title="Paper-cutting & Paper-carving" items={papercuttingItems} /> */}
-        {/* <ArtworkTable title="Photography" items={photographyItems} /> */}
-        
         <Gallery photos={PapercuttingItems} />
         <Gallery photos={PaintingItems} />
         <Gallery photos={PhotographyItems} />
       </Container>
     </Jumbotron>
   )
-}
-
-function ArtworkCarousel(props) {
-  const items = props.items.map((item, index) => {
-    return (
-      <Carousel.Item key={index}>
-        <img className="carouselImg" src={item.src} alt={item.caption} />
-        {/* <Carousel.Caption>
-          <h6>{item.caption}</h6>
-        </Carousel.Caption> */}
-      </Carousel.Item>
-    );
-  });
-  return (
-    <div id={props.id}>
-      <h4>{props.title}</h4>
-      <Carousel controls={false} interval={3000}>{items}</Carousel>
-    </div>
-  );
-}
-
-function ArtworkTable(props) {
-  const cols = props.items.map((item, index) => {
-    return (<Col key={index}><Image src={item.src} fluid /></Col>);
-  });
-  // array of Row
-  const rows = [];
-  let colNumber = 0;
-  let i = 0;
-  while (i < cols.length) {
-    colNumber = getRndInteger(1, 4);
-    const children = [];
-    for (let j = 0; j < colNumber && i + j < cols.length; j++) {
-      children.push(cols[i + j]);
-    }
-    rows.push(React.createElement(Row, {key: i}, children));
-    i += colNumber;
-  }
-  const container = React.createElement(Container, [], rows);
-
-  return (
-    <div>
-      <h4>{props.title}</h4>
-      {container}
-    </div>
-  );
 }
 
 function Contact() {
@@ -218,11 +152,3 @@ function App() {
 }
 
 export default App;
-
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
-}
