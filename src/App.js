@@ -11,13 +11,13 @@ import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
+import Gallery from "react-photo-gallery";
 
 import './App.css';
 
 import {
   GatesCenter, Xian, Xinyi, XinyiAndCamera,
-  Blue, Green, Pink, Red, Yellow, ChinesePapercutting,
-  BellTower, Eye
+  PapercuttingItems, PaintingItems, PhotographyItems
 } from './pics';
 import githubLogo from './logos/GitHub-Mark-120px-plus.png';
 import linkedInLogo from './logos/LI-In-Bug.png'
@@ -76,7 +76,7 @@ function Intro() {
           <IntroCard
             imgSrc={XinyiAndCamera}
             title="Interests"
-            text="Love photography, paper-cutting and paper-carving, painting and traveling."
+            text="Love photography, paper-cutting and paper-carving, painting, star-gazing and traveling."
             btnHref="#artworks"
             btnText="See my artworks"
           />
@@ -113,28 +113,32 @@ function CV() {
 }
 
 function Artwork() {
-  const papercuttingItems = [
-    {src: Blue, caption: 'Papercarving'},
-    {src: Yellow, caption: 'Papercarving'},
-    {src: Red, caption: 'Papercarving'},
-    {src: Pink, caption: 'Papercarving'},
-    {src: ChinesePapercutting, caption: 'Chinese Papercutting'},
-    {src: Green, caption: 'Papercarving'}
-  ];
-  const photographyItems = [
-
-  ];
-  const paintingItems = [
-    {src: BellTower, caption: 'Bell Tower in Xi\'an'},
-    {src: Eye, caption: 'Sketch of Eye'}
-  ]
+  // const papercuttingImgs = importAll(require.context('./pics/papercutting/', false, /\.(png|jpe?g|svg)$/));
+  // const papercuttingItems = papercuttingImgs.map(img => {
+  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
+  // });
+  // const photographyImgs = importAll(require.context('./pics/photography/', false, /\.(png|jpe?g|svg)$/));
+  // const photographyItems = photographyImgs.map(img => {
+  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
+  // });
+  // const paintingImgs = importAll(require.context('./pics/painting/', false, /\.(png|jpe?g|svg)$/));
+  // const paintingItems = paintingImgs.map(img => {
+  //   return {src: img, caption: img.split('.')[0].split('/').slice(-1)[0]};
+  // });
   return (
-    <Jumbotron>
+    <Jumbotron id="artworks">
       <Container>
         <h2>Artwork</h2>
-        <ArtworkCarousel id="papercutting" title="Paper-cutting & Paper-carving" items={papercuttingItems} />
-        <ArtworkCarousel id="photography" title="Photography" items={photographyItems} />
-        <ArtworkCarousel id="painting" title="Painting" items={paintingItems} />
+        {/* <ArtworkCarousel id="papercutting" title="Paper-cutting & Paper-carving" items={papercuttingItems} /> */}
+        {/* <ArtworkCarousel id="photography" title="Photography" items={photographyItems} /> */}
+        {/* <ArtworkCarousel id="painting" title="Painting" items={paintingItems} /> */}
+
+        {/* <ArtworkTable title="Paper-cutting & Paper-carving" items={papercuttingItems} /> */}
+        {/* <ArtworkTable title="Photography" items={photographyItems} /> */}
+        
+        <Gallery photos={PapercuttingItems} />
+        <Gallery photos={PaintingItems} />
+        <Gallery photos={PhotographyItems} />
       </Container>
     </Jumbotron>
   )
@@ -152,10 +156,37 @@ function ArtworkCarousel(props) {
     );
   });
   return (
-    <Jumbotron id={props.id}>
+    <div id={props.id}>
       <h4>{props.title}</h4>
-      <Carousel>{items}</Carousel>
-    </Jumbotron>
+      <Carousel controls={false} interval={3000}>{items}</Carousel>
+    </div>
+  );
+}
+
+function ArtworkTable(props) {
+  const cols = props.items.map((item, index) => {
+    return (<Col key={index}><Image src={item.src} fluid /></Col>);
+  });
+  // array of Row
+  const rows = [];
+  let colNumber = 0;
+  let i = 0;
+  while (i < cols.length) {
+    colNumber = getRndInteger(1, 4);
+    const children = [];
+    for (let j = 0; j < colNumber && i + j < cols.length; j++) {
+      children.push(cols[i + j]);
+    }
+    rows.push(React.createElement(Row, {key: i}, children));
+    i += colNumber;
+  }
+  const container = React.createElement(Container, [], rows);
+
+  return (
+    <div>
+      <h4>{props.title}</h4>
+      {container}
+    </div>
   );
 }
 
@@ -165,7 +196,7 @@ function Contact() {
       <Container>
         <h2>Contact</h2>
         <p>Email: wxyelaine98@gmail.com</p>
-        <Row>
+        <Row id="contactLogoContainer">
           <Col><a href="https://github.com/WxyElaine"><Image className="contactLogo" src={githubLogo} fluid/></a></Col>
           <Col><a href="https://www.linkedin.com/in/xinyi-wang-148919119/"><Image className="contactLogo" src={linkedInLogo} fluid/></a></Col>
         </Row>
@@ -187,3 +218,11 @@ function App() {
 }
 
 export default App;
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}

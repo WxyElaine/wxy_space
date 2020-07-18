@@ -81,8 +81,9 @@ body {
 
 /* Carousel */
 .carouselImg {
-  height: 50rem;
+  height: 100%;
   width: 100%;
+  margin-bottom: 3em;
 }
 
 .carousel-caption {
@@ -96,7 +97,20 @@ body {
   text-shadow: none;
 }
 
+.carousel-indicators li {
+  background-color: #a6a6a6;
+}
+
+.carousel-indicators .active {
+  background-color: #6b6b6b;
+}
+
 /* Contact */
 .contactLogo {
   width: 3rem;
+}
+
+#contactLogoContainer {
+  width: 40%;
+  margin: auto;
 }
