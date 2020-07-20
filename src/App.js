@@ -30,8 +30,8 @@ function Navigation() {
         <Nav className="mr-auto">
           <Nav.Link href="#cv">CV</Nav.Link>
           <NavDropdown title="ARTWORK" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#papercutting">Paper-cutting & Paper-carving</NavDropdown.Item>
             <NavDropdown.Item href="#photography">Photography</NavDropdown.Item>
+            <NavDropdown.Item href="#papercutting">Paper-cutting & Paper-carving</NavDropdown.Item>
             <NavDropdown.Item href="#painting">Painting</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="#contact">CONTACT</Nav.Link>
@@ -76,8 +76,8 @@ function Intro() {
             imgSrc={XinyiAndCamera}
             title="Interests"
             text="Love photography, paper-cutting and paper-carving, painting, star-gazing and traveling."
-            btnHref="#artworks"
-            btnText="See my artworks"
+            btnHref="#artwork"
+            btnText="See my artwork"
           />
         </Row>
       </Container>
@@ -111,17 +111,74 @@ function CV() {
   )
 }
 
-function Artwork() {
-  return (
-    <Jumbotron id="artworks">
-      <Container>
-        <h2>Artwork</h2>
-        <Gallery photos={PapercuttingItems} />
-        <Gallery photos={PaintingItems} />
-        <Gallery photos={PhotographyItems} />
-      </Container>
-    </Jumbotron>
-  )
+class Artwork extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedArtwork: 0  // 0: photography, 1: papercutting, 2: painting
+    };
+    this.handleArtworkClick = this.handleArtworkClick.bind(this);
+    this.getArtworkButtonClassName = this.getArtworkButtonClassName.bind(this);
+  }
+
+  handleArtworkClick(index) {
+    this.setState({ selectedArtwork: index });
+  }
+
+  getArtworkButtonClassName(index) {
+    if (this.state.selectedArtwork === index) {
+      return 'navHighlight';
+    } else {
+      return '';
+    }
+  }
+
+  render() {
+    return (
+      <Jumbotron id="artwork" onContextMenu={(e) => e.preventDefault()} >
+        <Nav fill variant="tabs" defaultActiveKey="/home">
+          <ArtworkButtons
+            artworkList={['Photography', 'Papercutting', 'Painting']}
+            onClick={this.handleArtworkClick}
+            getClassName={this.getArtworkButtonClassName}
+          />
+        </Nav>
+        <ArtworkComponent
+          selectedArtwork={this.state.selectedArtwork}
+        />
+        <p id="copyright">
+          Copyright &copy; 2015-<span>{(new Date()).getFullYear()}</span>. Xinyi Wang. All Rights Reserved.
+        </p>
+      </Jumbotron>
+    );
+  }
+}
+
+function ArtworkButtons(props) {
+  const artworkList = props.artworkList;
+  return (artworkList.map((artworkName, index) => {
+    return (
+      <Nav.Item key={index}>
+        <Nav.Link
+          onClick={() => props.onClick(index)}
+          className={props.getClassName(index)}
+        >
+          {artworkName}
+        </Nav.Link>
+      </Nav.Item>
+    );
+  }));
+}
+
+function ArtworkComponent(props) {
+  switch (props.selectedArtwork) {
+    case 0:
+      return <Gallery photos={PhotographyItems} id="photography"/>;
+    case 1:
+      return <Gallery photos={PapercuttingItems} id="papercutting"/>;
+    default:
+      return <Gallery photos={PaintingItems} id="painting"/>;
+  }
 }
 
 function Contact() {
@@ -139,16 +196,22 @@ function Contact() {
   )
 }
 
-function App() {
-  return (
-    <div className="App bg-light">
-      <Navigation />
-      <Intro />
-      <CV />
-      <Artwork />
-      <Contact />
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+
+  }
+
+  render() {
+    return (
+      <div className="App bg-light">
+        <Navigation />
+        <Intro />
+        <CV />
+        <Artwork />
+        <Contact />
+      </div>
+    );
+  }
 }
 
 export default App;

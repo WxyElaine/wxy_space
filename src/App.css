@@ -13,8 +13,15 @@
   }
 }
 
-body {
-  padding-top: 40px;
+/* Button and Navbar */
+.btn-purple {
+  background-color: #6b2b87;
+  color: white;
+}
+
+.btn-purple:hover {
+  background-color: #cdb8d7;
+  color: black;
 }
 
 /* Jumbotron */
@@ -62,15 +69,6 @@ body {
   font-size: 0.7em;
 }
 
-.btn-purple {
-  background-color: #6b2b87;
-  color: white;
-}
-
-.btn-purple:hover {
-  background-color: #cdb8d7;
-}
-
 .introCardMask {
   background: rgba(0,0,0,0.55);
 }
@@ -79,30 +77,22 @@ body {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0) 30%);
 }
 
-/* Carousel */
-.carouselImg {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 3em;
+/* Artwork */
+#artwork .nav-link {
+  background-color: #f0e9f3;
+  color: black;
 }
 
-.carousel-caption {
-  border: 0;
-  bottom: 1px;
-  color: #b2b2b2;
-  font-size: 1.5em;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  text-shadow: none;
+#artwork .navHighlight, #artwork .nav-link:hover {
+  background-color: #cdb8d7;
+  color: black;
 }
 
-.carousel-indicators li {
-  background-color: #a6a6a6;
-}
-
-.carousel-indicators .active {
-  background-color: #6b6b6b;
+/* Copyright */
+#copyright {
+  color: #acb1e5;
+  font-size: 0.7em;;
+  margin-top: 1.5rem;
 }
 
 /* Contact */
@@ -111,6 +101,6 @@ body {
 }
 
 #contactLogoContainer {
-  width: 40%;
   margin: auto;
+  width: 40%;
 }
