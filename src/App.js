@@ -2,7 +2,6 @@ import React from 'react';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,13 +9,16 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Gallery from "react-photo-gallery";
 
+import TabComponent from './TabComponent';
 import './App.css';
 
 import {
-  GatesCenter, Xian, Xinyi, XinyiAndCamera,
-  PapercuttingItems, PaintingItems, PhotographyItems
+  Education, Skills, RecentAppointments, ResearchExperience, Publications, Presentations,
+  Awards, Projects, Activities} from './cv';
+
+import {
+  GatesCenter, Xian, Xinyi, XinyiAndCamera, PhotographyItems, PapercuttingItems, PaintingItems
 } from './pics';
 import githubLogo from './logos/GitHub-Mark-120px-plus.png';
 import linkedInLogo from './logos/LI-In-Bug.png'
@@ -29,11 +31,7 @@ function Navigation() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="#cv">CV</Nav.Link>
-          <NavDropdown title="ARTWORK" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#photography">Photography</NavDropdown.Item>
-            <NavDropdown.Item href="#papercutting">Paper-cutting & Paper-carving</NavDropdown.Item>
-            <NavDropdown.Item href="#painting">Painting</NavDropdown.Item>
-          </NavDropdown>
+          <Nav.Link href="#artwork">ARTWORK</Nav.Link>
           <Nav.Link href="#contact">CONTACT</Nav.Link>
         </Nav>
       </Navbar.Collapse>
@@ -104,88 +102,44 @@ function IntroCard(props) {
 function CV() {
   return (
     <Jumbotron id="cv">
-      <Container>
-        <h2>CV</h2>
-      </Container>
+      <h2>CV</h2>
+      <TabComponent
+        type='cv'
+        tabNames={['Education & Skills', 'Recent Appointments', 'Research Experience',
+                   'Publications, Presentations & Awards', 'Projects', 'Activities']}
+        contentList={[
+          [Education, Skills],
+          [RecentAppointments],
+          [ResearchExperience],
+          [Publications, Presentations, Awards],
+          [Projects],
+          [Activities]]}
+      />
     </Jumbotron>
   )
 }
 
-class Artwork extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedArtwork: 0  // 0: photography, 1: papercutting, 2: painting
-    };
-    this.handleArtworkClick = this.handleArtworkClick.bind(this);
-    this.getArtworkButtonClassName = this.getArtworkButtonClassName.bind(this);
-  }
-
-  handleArtworkClick(index) {
-    this.setState({ selectedArtwork: index });
-  }
-
-  getArtworkButtonClassName(index) {
-    if (this.state.selectedArtwork === index) {
-      return 'navHighlight';
-    } else {
-      return '';
-    }
-  }
-
-  render() {
-    return (
-      <Jumbotron id="artwork" onContextMenu={(e) => e.preventDefault()} >
-        <Nav fill variant="tabs" defaultActiveKey="/home">
-          <ArtworkButtons
-            artworkList={['Photography', 'Papercutting', 'Painting']}
-            onClick={this.handleArtworkClick}
-            getClassName={this.getArtworkButtonClassName}
-          />
-        </Nav>
-        <ArtworkComponent
-          selectedArtwork={this.state.selectedArtwork}
-        />
-        <p id="copyright">
-          Copyright &copy; 2015-<span>{(new Date()).getFullYear()}</span>. Xinyi Wang. All Rights Reserved.
-        </p>
-      </Jumbotron>
-    );
-  }
-}
-
-function ArtworkButtons(props) {
-  const artworkList = props.artworkList;
-  return (artworkList.map((artworkName, index) => {
-    return (
-      <Nav.Item key={index}>
-        <Nav.Link
-          onClick={() => props.onClick(index)}
-          className={props.getClassName(index)}
-        >
-          {artworkName}
-        </Nav.Link>
-      </Nav.Item>
-    );
-  }));
-}
-
-function ArtworkComponent(props) {
-  switch (props.selectedArtwork) {
-    case 0:
-      return <Gallery photos={PhotographyItems} id="photography"/>;
-    case 1:
-      return <Gallery photos={PapercuttingItems} id="papercutting"/>;
-    default:
-      return <Gallery photos={PaintingItems} id="painting"/>;
-  }
+function Artwork() {
+  return (
+    <Jumbotron id="artwork" onContextMenu={(e) => e.preventDefault()}>
+      <h2>ARTWORK</h2>
+      <TabComponent
+        type='artwork'
+        tabNames={['Photography', 'Papercutting', 'Painting']}
+        contentList={[PhotographyItems, PapercuttingItems, PaintingItems]}
+      />
+      <p id="copyright">
+        Copyright &copy; 2015-<span>{(new Date()).getFullYear()}</span>. Xinyi Wang. All Rights Reserved.
+      </p>
+    </Jumbotron>
+  );
 }
 
 function Contact() {
   return (
     <Jumbotron id="contact">
       <Container>
-        <h2>Contact</h2>
+        <h2>CONTACT</h2>
         <p>Email: wxyelaine98@gmail.com</p>
         <Row id="contactLogoContainer">
           <Col><a href="https://github.com/WxyElaine"><Image className="contactLogo" src={githubLogo} fluid/></a></Col>

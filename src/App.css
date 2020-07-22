@@ -31,6 +31,7 @@
 
 .jumbotron h2 {
   color: #6b2b87;
+  margin-bottom: 1em;
 }
 
 /* Navigation bar */
@@ -77,15 +78,33 @@
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0) 30%);
 }
 
-/* Artwork */
-#artwork .nav-link {
+/* Tabs for CV and Artwork */
+.nav-tabs .nav-link {
   background-color: #f0e9f3;
   color: black;
 }
 
-#artwork .navHighlight, #artwork .nav-link:hover {
+.nav-tabs .nav-link.active {
+  background-color: #a28dac;
+  color: white;
+}
+
+.nav-tabs .nav-link:hover {
   background-color: #cdb8d7;
   color: black;
+}
+
+/* Cv */
+.list-group-flush {
+  text-align: left;
+}
+
+#cv h5 {
+  margin-top: 1rem;
+}
+
+#cv p {
+  margin-bottom: 0.5rem;
 }
 
 /* Copyright */
