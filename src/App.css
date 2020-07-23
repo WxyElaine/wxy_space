@@ -87,6 +87,7 @@ a {
 .nav-tabs .nav-link {
   background-color: #f0e9f3;
   color: black;
+  margin-left: 0.3rem;
 }
 
 .nav-tabs .nav-link.active {
@@ -99,9 +100,39 @@ a {
   color: black;
 } */
 
+.nav-tabs .collapsible-title {
+  display: none;
+}
+
+.nav-tabs .active .collapsible-title {
+  display: inline;
+}
+
 /* Cv */
-.list-group-flush {
-  text-align: left;
+.cv-desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .cv-desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+.btn-link, .btn-link:active {
+  color: #6b2b87;
+}
+
+.btn-link:active {
+  font-weight: bold;
 }
 
 #cv h5 {
@@ -110,6 +141,14 @@ a {
 
 #cv p {
   margin-bottom: 0.5rem;
+}
+
+.purple-heading {
+  color: #6b2b87;
+}
+
+.list-group-flush {
+  text-align: left;
 }
 
 /* Copyright */

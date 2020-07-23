@@ -1,21 +1,34 @@
 import React from 'react';
 
 export const Education = [
-    <h5>Education</h5>,
-    <p><b>2016-2020</b> B.Sc. in Computer Science</p>,
-    <p>University of Washington, Seattle, WA</p>
+    [
+        <h5 className="purple-heading">Education</h5>
+    ],
+    [
+        <p><b>2016-2020</b> B.Sc. in Computer Science</p>,
+        <p>University of Washington, Seattle, WA</p>
+    ]
 ];
 
 export const Skills = [
-    <h5>Skills</h5>,
-    <p>Python, Java, C++, HTML/CSS, JavaScript, Swift, C</p>,
-    <p>Robot Operating System (ROS), Linux, Git, LATEX, SolidWorks, Fabrication</p>
+    [
+        <h5 className="purple-heading">Skills</h5>
+    ],
+    [
+        <p>Python, Java, C++, HTML/CSS, JavaScript, Swift, C</p>,
+        <p>Robot Operating System (ROS), Linux, Git, LATEX, SolidWorks, Fabrication</p>
+    ]
 ];
 
 export const RecentAppointments = [
-    <h5>Undergraduate Research Assistant</h5>,
-    <p>2019.4-2020.6</p>,
-    <p><a href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a>, University of Washington, Seattle, WA</p>
+    [
+        <h5 className="purple-heading">Appointments</h5>
+    ],
+    [
+        <h5>Undergraduate Research Assistant</h5>,
+        <p>2019.4-2020.6</p>,
+        <p><a href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a>, University of Washington, Seattle, WA</p>
+    ]
 ];
 
 export const ResearchExperience = [
@@ -35,6 +48,9 @@ export const ResearchExperience = [
 
 export const Publications = [
     [
+        <h5 className="purple-heading">Publications</h5>
+    ],
+    [
         <p><b>Xinyi Wang</b>, Kavita Krishnaswamy, Maria E. Cabrera, and Maya Cakmak. 2020. <a href="https://dl.acm.org/doi/10.1145/3371382.3378387">"Robotic Limb Repositioning with Supervised Autonomy"</a>. In Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction (HRI ’20). Association for Computing Machinery, New York, NY, USA, 511–513.</p>
     ],
     [
@@ -43,13 +59,23 @@ export const Publications = [
 ];
 
 export const Presentations = [
-    <p><b>2020.4.4</b> <a href="http://wrd.cs.washington.edu//static/pdf/posters/LimbRepoPoster.pdf">Limb Repositioning with Supervised Autonomy.</a> Xinyi Wang.</p>,
-    <p><a href="http://wrd.cs.washington.edu">University of Washington Allen School Women’s Research Day.</a> <b>Poster.</b></p>
+    [
+        <h5 className="purple-heading">Presentations</h5>
+    ],
+    [
+        <p><b>2020.4.4</b> <a href="http://wrd.cs.washington.edu//static/pdf/posters/LimbRepoPoster.pdf">Limb Repositioning with Supervised Autonomy.</a> Xinyi Wang.</p>,
+        <p><a href="http://wrd.cs.washington.edu">University of Washington Allen School Women’s Research Day.</a> <b>Poster.</b></p>
+    ]
 ];
 
 export const Awards = [
-    <p>2020 <b>Outstanding Undergraduate Researcher Award <u>Honorable Mention</u>, Computing Research Association</b></p>,
-    <p>Recognizes undergraduate students in North American colleges and universities who show outstanding research potential in an area of computing research.</p>
+    [
+        <h5 className="purple-heading">Awards</h5>
+    ],
+    [
+        <p>2020 <b>Outstanding Undergraduate Researcher Award <u>Honorable Mention</u>, Computing Research Association</b></p>,
+        <p>Recognizes undergraduate students in North American colleges and universities who show outstanding research potential in an area of computing research.</p>
+    ]
 ];
 
 export const Projects = [

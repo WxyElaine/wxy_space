@@ -13,6 +13,7 @@ import Button from 'react-bootstrap/Button';
 import Emoji from 'a11y-react-emoji';
 
 import TabComponent from './TabComponent';
+import AccordionComponent from './AccordionComponent';
 import './App.css';
 
 import {
@@ -102,55 +103,59 @@ function IntroCard(props) {
 }
 
 function CV() {
+  const names = [
+    <CollapsibleTabName name="Education" symbols={["🎓"]} labels={["graducation cap"]} />,
+    <CollapsibleTabName name="Skills" symbols={["💻"]} labels={["laptop"]} />,
+    <CollapsibleTabName name="Appointments" symbols={["👩🏻‍💻"]} labels={["women technologist"]} />,
+    <CollapsibleTabName name="Research" symbols={["🔍", "🤖"]} labels={["magnifying glass", "robot"]} />,
+    <CollapsibleTabName name="Publications" symbols={["📃"]} labels={["paper"]} />,
+    <CollapsibleTabName name="Presentations" symbols={["💬"]} labels={["speech bubble"]} />,
+    <CollapsibleTabName name="Awards" symbols={["🏅"]} labels={["metal"]} />,
+    <CollapsibleTabName name="Projects" symbols={["🖥️", "🖱️", "⌨️"]} labels={["desktop computer", "mouse", "keyboard"]} />,
+    <CollapsibleTabName name="Activities" symbols={["🎗️", "🇨🇳"]} labels={["gold ribbon", "flag of china"]} />
+  ];
+  const contentList = [
+    Education, Skills, RecentAppointments, ResearchExperience,
+    Publications, Presentations, Awards, Projects, Activities
+  ];
   return (
     <Jumbotron id="cv">
       <h2>CV</h2>
-      <TabComponent
-        type='cv'
-        tabNames={[
-          <span>Education <Emoji symbol="&#x1F393;" label="graducation cap" /></span>,
-          <span>Skills <Emoji symbol="&#x1F4BB;" label="laptop" /></span>,
-          <span>Appointments <Emoji symbol="&#x1F469;&#x1F3FB;&#x200D;&#x1F4BB;" label="women technologist" /></span>,
-          <span>Research <Emoji symbol="&#x1F50D;" label="magnifying glass" /> <Emoji symbol="&#x1F916;" label="robot" /></span>,
-          <span>Publications <Emoji symbol="&#x1F4C3;" label="paper" /></span>,
-          <span>Presentations <Emoji symbol="&#x1F4AC;" label="speech bubble" /></span>,
-          <span>Awards <Emoji symbol="&#x1F3C5;" label="metal" /></span>,
-          <span>Projects <Emoji symbol="&#x1F5A5;" label="desktop computer" /> <Emoji symbol="&#x1F5B1;&#xFE0F;" label="mouse" /> <Emoji symbol="&#x2328;&#xFE0F;" label="keyboard" /></span>,
-          <span>Activities <Emoji symbol="&#x1F397;" label="gold ribbon" /> <Emoji symbol="&#x1F1E8;&#x1F1F3;" label="flag of china" /></span>
-        ]}
-        contentList={[
-          [Education],
-          [Skills],
-          [RecentAppointments],
-          ResearchExperience,
-          Publications,
-          [Presentations],
-          [Awards],
-          Projects,
-          Activities
-        ]}
-      />
+      <TabComponent type="cv" tabNames={names} contentList={contentList} />
+      <AccordionComponent type="cv" cardNames={names} contentList={contentList} />
     </Jumbotron>
   )
 }
 
 function Artwork() {
+  const names = [
+    <CollapsibleTabName name="Photography" symbols={["📷"]} labels={["camera"]} />,
+    <CollapsibleTabName name="Papercutting" symbols={["✂️"]} labels={["scissor"]} />,
+    <CollapsibleTabName name="Painting" symbols={["🎨"]} labels={["palette"]} />
+  ];
+  const contentList = [PhotographyItems, PapercuttingItems, PaintingItems];
   return (
     <Jumbotron id="artwork" onContextMenu={(e) => e.preventDefault()}>
       <h2>ARTWORK</h2>
-      <TabComponent
-        type='artwork'
-        tabNames={[
-          <span>Photography <Emoji symbol="&#x1F4F7;" label="camera" /></span>,
-          <span>Papercutting <Emoji symbol="&#x2702;&#xFE0F;" label="scissor" /></span>,
-          <span>Painting <Emoji symbol="&#x1F3A8;" label="palette" /></span>
-        ]}
-        contentList={[PhotographyItems, PapercuttingItems, PaintingItems]}
-      />
+      <TabComponent type="artwork" tabNames={names} contentList={contentList} />
       <p id="copyright">
         Copyright &copy; 2015-<span>{(new Date()).getFullYear()}</span>. Xinyi Wang. All Rights Reserved.
       </p>
     </Jumbotron>
+  );
+}
+
+function CollapsibleTabName(props) {
+  const emojis = props.symbols.map((symbol, index) => {
+    return (
+      <Emoji key={index} symbol={symbol} label={props.labels[index]} />
+    );
+  });
+  return (
+    <span>
+      <span className="collapsible-title">{props.name} </span>
+      {emojis}
+    </span>
   );
 }
 
@@ -166,14 +171,10 @@ function Contact() {
         </Row>
       </Container>
     </Jumbotron>
-  )
+  );
 }
 
 class App extends React.Component {
-  componentDidMount() {
-
-  }
-
   render() {
     return (
       <div className="App bg-light">

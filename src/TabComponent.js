@@ -26,14 +26,13 @@ class TabComponent extends Component {
                 <Tab key={index} eventKey={index} title={name}>
                     <TabContent 
                         type={this.props.type}
-                        selectedTab={this.state.activeTab}
-                        contentList={this.props.contentList}
+                        contentList={this.props.contentList[this.state.activeTab]}
                     />
                 </Tab>
             );
         });
         return (
-            <div>
+            <div className={this.props.type + "-desktop"}>
                 <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelection} className="justify-content-center">
                     {tabItems}
                 </Tabs>
@@ -44,7 +43,7 @@ class TabComponent extends Component {
 
 function TabContent(props) {
     if (props.type === 'cv') {
-        const cvItems = props.contentList[props.selectedTab].map((contents, index) => {
+        const cvItems = props.contentList.map((contents, index) => {
             const item = contents.map((content, index) => {
                 return <div key={index}>{content}</div>;
             });
@@ -54,7 +53,7 @@ function TabContent(props) {
             <ListGroup variant="flush">{cvItems}</ListGroup>
         );
     } else {  // 'artwork'
-        return <Gallery photos={props.contentList[props.selectedTab]} />;
+        return <Gallery photos={props.contentList} />;
     }
 }
 
