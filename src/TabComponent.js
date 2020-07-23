@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import ListGroup from 'react-bootstrap/ListGroup';
+
 import Gallery from "react-photo-gallery";
 
 class TabComponent extends Component {
@@ -33,7 +34,7 @@ class TabComponent extends Component {
         });
         return (
             <div>
-                <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelection}>
+                <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelection} className="justify-content-center">
                     {tabItems}
                 </Tabs>
             </div>

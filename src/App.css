@@ -13,6 +13,11 @@
   }
 }
 
+/* Link */
+a {
+  color: #aa85bb;
+}
+
 /* Button and Navbar */
 .btn-purple {
   background-color: #6b2b87;
@@ -89,10 +94,10 @@
   color: white;
 }
 
-.nav-tabs .nav-link:hover {
+/* .nav-tabs .nav-link:hover {
   background-color: #cdb8d7;
   color: black;
-}
+} */
 
 /* Cv */
 .list-group-flush {

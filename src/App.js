@@ -10,6 +10,8 @@ import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+import Emoji from 'a11y-react-emoji';
+
 import TabComponent from './TabComponent';
 import './App.css';
 
@@ -105,15 +107,28 @@ function CV() {
       <h2>CV</h2>
       <TabComponent
         type='cv'
-        tabNames={['Education & Skills', 'Recent Appointments', 'Research Experience',
-                   'Publications, Presentations & Awards', 'Projects', 'Activities']}
+        tabNames={[
+          <span>Education <Emoji symbol="&#x1F393;" label="graducation cap" /></span>,
+          <span>Skills <Emoji symbol="&#x1F4BB;" label="laptop" /></span>,
+          <span>Appointments <Emoji symbol="&#x1F469;&#x1F3FB;&#x200D;&#x1F4BB;" label="women technologist" /></span>,
+          <span>Research <Emoji symbol="&#x1F50D;" label="magnifying glass" /> <Emoji symbol="&#x1F916;" label="robot" /></span>,
+          <span>Publications <Emoji symbol="&#x1F4C3;" label="paper" /></span>,
+          <span>Presentations <Emoji symbol="&#x1F4AC;" label="speech bubble" /></span>,
+          <span>Awards <Emoji symbol="&#x1F3C5;" label="metal" /></span>,
+          <span>Projects <Emoji symbol="&#x1F5A5;" label="desktop computer" /> <Emoji symbol="&#x1F5B1;&#xFE0F;" label="mouse" /> <Emoji symbol="&#x2328;&#xFE0F;" label="keyboard" /></span>,
+          <span>Activities <Emoji symbol="&#x1F397;" label="gold ribbon" /> <Emoji symbol="&#x1F1E8;&#x1F1F3;" label="flag of china" /></span>
+        ]}
         contentList={[
-          [Education, Skills],
+          [Education],
+          [Skills],
           [RecentAppointments],
-          [ResearchExperience],
-          [Publications, Presentations, Awards],
-          [Projects],
-          [Activities]]}
+          ResearchExperience,
+          Publications,
+          [Presentations],
+          [Awards],
+          Projects,
+          Activities
+        ]}
       />
     </Jumbotron>
   )
@@ -125,7 +140,11 @@ function Artwork() {
       <h2>ARTWORK</h2>
       <TabComponent
         type='artwork'
-        tabNames={['Photography', 'Papercutting', 'Painting']}
+        tabNames={[
+          <span>Photography <Emoji symbol="&#x1F4F7;" label="camera" /></span>,
+          <span>Papercutting <Emoji symbol="&#x2702;&#xFE0F;" label="scissor" /></span>,
+          <span>Painting <Emoji symbol="&#x1F3A8;" label="palette" /></span>
+        ]}
         contentList={[PhotographyItems, PapercuttingItems, PaintingItems]}
       />
       <p id="copyright">
