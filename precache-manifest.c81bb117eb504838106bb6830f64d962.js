@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7961587b0dc694d8a97cf90736855bac",
+    "revision": "bfbbc7419b4fea7cd6188ba123a82e3f",
     "url": "/wxy_space/index.html"
   },
   {
-    "revision": "bdfec7a7defc909b9a41",
+    "revision": "27ed3a015c4d22bb0dd0",
     "url": "/wxy_space/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "7a15d4863b31e0bb7565",
+    "revision": "cf87966863d5e22f4c69",
     "url": "/wxy_space/static/css/main.46f7d1fb.chunk.css"
   },
   {
-    "revision": "bdfec7a7defc909b9a41",
-    "url": "/wxy_space/static/js/2.0ee96206.chunk.js"
+    "revision": "27ed3a015c4d22bb0dd0",
+    "url": "/wxy_space/static/js/2.b69c1fd2.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/wxy_space/static/js/2.0ee96206.chunk.js.LICENSE.txt"
+    "url": "/wxy_space/static/js/2.b69c1fd2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a15d4863b31e0bb7565",
-    "url": "/wxy_space/static/js/main.3cd78814.chunk.js"
+    "revision": "cf87966863d5e22f4c69",
+    "url": "/wxy_space/static/js/main.77e5b123.chunk.js"
   },
   {
     "revision": "63016cb68029c13e44f9",
@@ -86,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4253e64391a651048af2e615147808c4",
     "url": "/wxy_space/static/media/la-push-woods.4253e643.jpg"
+  },
+  {
+    "revision": "7b2ced44e0fbb66c8406758437e1b1f6",
+    "url": "/wxy_space/static/media/logo-white.7b2ced44.png"
   },
   {
     "revision": "22562e9b131eebeb0de481b74481fc3c",

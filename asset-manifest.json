@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/wxy_space/static/css/main.46f7d1fb.chunk.css",
-    "main.js": "/wxy_space/static/js/main.3cd78814.chunk.js",
-    "main.js.map": "/wxy_space/static/js/main.3cd78814.chunk.js.map",
+    "main.js": "/wxy_space/static/js/main.77e5b123.chunk.js",
+    "main.js.map": "/wxy_space/static/js/main.77e5b123.chunk.js.map",
     "runtime-main.js": "/wxy_space/static/js/runtime-main.627ca0ed.js",
     "runtime-main.js.map": "/wxy_space/static/js/runtime-main.627ca0ed.js.map",
     "static/css/2.af3c1da9.chunk.css": "/wxy_space/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.0ee96206.chunk.js": "/wxy_space/static/js/2.0ee96206.chunk.js",
-    "static/js/2.0ee96206.chunk.js.map": "/wxy_space/static/js/2.0ee96206.chunk.js.map",
+    "static/js/2.b69c1fd2.chunk.js": "/wxy_space/static/js/2.b69c1fd2.chunk.js",
+    "static/js/2.b69c1fd2.chunk.js.map": "/wxy_space/static/js/2.b69c1fd2.chunk.js.map",
     "index.html": "/wxy_space/index.html",
-    "precache-manifest.8ae172f770d047fd89dca6c8df85ff4a.js": "/wxy_space/precache-manifest.8ae172f770d047fd89dca6c8df85ff4a.js",
+    "precache-manifest.c81bb117eb504838106bb6830f64d962.js": "/wxy_space/precache-manifest.c81bb117eb504838106bb6830f64d962.js",
     "service-worker.js": "/wxy_space/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/wxy_space/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.46f7d1fb.chunk.css.map": "/wxy_space/static/css/main.46f7d1fb.chunk.css.map",
-    "static/js/2.0ee96206.chunk.js.LICENSE.txt": "/wxy_space/static/js/2.0ee96206.chunk.js.LICENSE.txt",
+    "static/js/2.b69c1fd2.chunk.js.LICENSE.txt": "/wxy_space/static/js/2.b69c1fd2.chunk.js.LICENSE.txt",
     "static/media/aurora-in-alaska.jpg": "/wxy_space/static/media/aurora-in-alaska.7835c0f6.jpg",
     "static/media/bell-tower.jpg": "/wxy_space/static/media/bell-tower.06dc7eec.jpg",
     "static/media/blue.jpg": "/wxy_space/static/media/blue.77254713.jpg",
@@ -29,6 +29,7 @@
     "static/media/hawaii-landscape1.jpg": "/wxy_space/static/media/hawaii-landscape1.afe5c6ac.jpg",
     "static/media/hawaii-landscape2.jpg": "/wxy_space/static/media/hawaii-landscape2.94716fee.jpg",
     "static/media/la-push-woods.jpg": "/wxy_space/static/media/la-push-woods.4253e643.jpg",
+    "static/media/logo-white.png": "/wxy_space/static/media/logo-white.7b2ced44.png",
     "static/media/milky-way-galaxy-in-hawaii.jpg": "/wxy_space/static/media/milky-way-galaxy-in-hawaii.22562e9b.jpg",
     "static/media/milky-way-galaxy-in-tibet.jpg": "/wxy_space/static/media/milky-way-galaxy-in-tibet.04ae3180.jpg",
     "static/media/mountains-in-alaska.jpg": "/wxy_space/static/media/mountains-in-alaska.d96ce91c.jpg",
@@ -54,8 +55,8 @@
   "entrypoints": [
     "static/js/runtime-main.627ca0ed.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.0ee96206.chunk.js",
+    "static/js/2.b69c1fd2.chunk.js",
     "static/css/main.46f7d1fb.chunk.css",
-    "static/js/main.3cd78814.chunk.js"
+    "static/js/main.77e5b123.chunk.js"
   ]
 }
