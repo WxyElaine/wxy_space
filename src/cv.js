@@ -33,6 +33,9 @@ export const RecentAppointments = [
 
 export const ResearchExperience = [
     [
+        <h5 className="purple-heading">Research</h5>
+    ],
+    [
         <h5>Robotic Limb Repositioning with Supervised Autonomy</h5>,
         <p><u>Mentors:</u> <a href="https://homes.cs.washington.edu/~mcakmak/">Dr. Maya Cakmak</a>, <a href="https://marucabrera.wixsite.com/homepage">Dr. Maria Cabrera</a></p>,
         <p><u>Location:</u> <a href="https://hcrlab.cs.washington.edu">Human-Centered Robotics Lab</a>, University of Washington, Seattle, WA</p>,
@@ -58,6 +61,16 @@ export const Publications = [
     ]
 ];
 
+export const Awards = [
+    [
+        <h5 className="purple-heading">Awards</h5>
+    ],
+    [
+        <p><b>2020 Outstanding Undergraduate Researcher Award <u>Honorable Mention</u></b>, Computing Research Association</p>,
+        <p>Recognizes undergraduate students in North American colleges and universities who show outstanding research potential in an area of computing research.</p>
+    ]
+];
+
 export const Presentations = [
     [
         <h5 className="purple-heading">Presentations</h5>
@@ -68,17 +81,10 @@ export const Presentations = [
     ]
 ];
 
-export const Awards = [
-    [
-        <h5 className="purple-heading">Awards</h5>
-    ],
-    [
-        <p>2020 <b>Outstanding Undergraduate Researcher Award <u>Honorable Mention</u>, Computing Research Association</b></p>,
-        <p>Recognizes undergraduate students in North American colleges and universities who show outstanding research potential in an area of computing research.</p>
-    ]
-];
-
 export const Projects = [
+    [
+        <h5 className="purple-heading">Projects</h5>
+    ],
     [
         <h5>RoboCup@Home 2020</h5>,
         <p>Worked as part of the <a href="https://github.com/homeskies">UW CSE team</a> to participate in RoboCup 2020 (now postponed to 2021) in the @Home Open Platform League with the Fetch mobile manipulator. Developed general-purpose navigation, manipulation, and interaction capabilities for robots to assist people in their homes.</p>
@@ -102,6 +108,9 @@ export const Projects = [
 ];
 
 export const Activities = [
+    [
+        <h5 className="purple-heading">Activities</h5>
+    ],
     [
         <h5>Volunteer at Xi’an Gold Ribbon Childcare and Aid Center</h5>,
         <p>2015.9-present</p>,

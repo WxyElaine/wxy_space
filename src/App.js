@@ -17,19 +17,30 @@ import AccordionComponent from './AccordionComponent';
 import './App.css';
 
 import {
-  Education, Skills, RecentAppointments, ResearchExperience, Publications, Presentations,
-  Awards, Projects, Activities} from './cv';
+  Education, Skills, RecentAppointments, ResearchExperience, Publications, Awards,
+  Presentations, Projects, Activities} from './cv';
 
 import {
   GatesCenter, Xian, Xinyi, XinyiAndCamera, PhotographyItems, PapercuttingItems, PaintingItems
 } from './pics';
+
+import logoWhite from './logos/logo-white.png';
 import githubLogo from './logos/GitHub-Mark-120px-plus.png';
-import linkedInLogo from './logos/LI-In-Bug.png'
+import linkedInLogo from './logos/LI-In-Bug.png';
 
 function Navigation() {
   return (
     <Navbar variant="dark" expand="md" fixed="top">
-      <Navbar.Brand href="#intro">Xinyi&#39;s Portfolio</Navbar.Brand>
+      <Navbar.Brand href="#intro">
+      <img
+        src={logoWhite}
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
+        alt="Xinyi's logo"
+      />{' '}
+        Xinyi&#39;s Portfolio
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -109,14 +120,14 @@ function CV() {
     <CollapsibleTabName name="Appointments" symbols={["👩🏻‍💻"]} labels={["women technologist"]} />,
     <CollapsibleTabName name="Research" symbols={["🔍", "🤖"]} labels={["magnifying glass", "robot"]} />,
     <CollapsibleTabName name="Publications" symbols={["📃"]} labels={["paper"]} />,
-    <CollapsibleTabName name="Presentations" symbols={["💬"]} labels={["speech bubble"]} />,
     <CollapsibleTabName name="Awards" symbols={["🏅"]} labels={["metal"]} />,
+    <CollapsibleTabName name="Presentations" symbols={["💬"]} labels={["speech bubble"]} />,
     <CollapsibleTabName name="Projects" symbols={["🖥️", "🖱️", "⌨️"]} labels={["desktop computer", "mouse", "keyboard"]} />,
     <CollapsibleTabName name="Activities" symbols={["🎗️", "🇨🇳"]} labels={["gold ribbon", "flag of china"]} />
   ];
   const contentList = [
     Education, Skills, RecentAppointments, ResearchExperience,
-    Publications, Presentations, Awards, Projects, Activities
+    Publications, Awards, Presentations, Projects, Activities
   ];
   return (
     <Jumbotron id="cv">
