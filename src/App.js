@@ -185,18 +185,16 @@ function Contact() {
   );
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App bg-light">
-        <Navigation />
-        <Intro />
-        <CV />
-        <Artwork />
-        <Contact />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App bg-light">
+      <Navigation />
+      <Intro />
+      <CV />
+      <Artwork />
+      <Contact />
+    </div>
+  );
 }
 
 export default App;

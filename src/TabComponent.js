@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
@@ -6,39 +6,31 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import Gallery from "react-photo-gallery";
 
-class TabComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeTab: 0  // 0: photography, 1: papercutting, 2: painting
-        };
-        this.handleSelection = this.handleSelection.bind(this);
-    }
-    
-    handleSelection(selectedTab) {
-        this.setState({ activeTab: selectedTab });
-    }
+function TabComponent(props) {
+    const [activeTab, setActiveTab] = useState(0);
 
-    render() {
-        const tabNames = this.props.tabNames;        
-        const tabItems = tabNames.map((name, index) => {
-            return (
-                <Tab key={index} eventKey={index} title={name}>
-                    <TabContent 
-                        type={this.props.type}
-                        contentList={this.props.contentList[this.state.activeTab]}
-                    />
-                </Tab>
-            );
-        });
+    const tabNames = props.tabNames;        
+    const tabItems = tabNames.map((name, index) => {
         return (
-            <div className={this.props.type + "-desktop"}>
-                <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelection} className="justify-content-center">
-                    {tabItems}
-                </Tabs>
-            </div>
+            <Tab key={index} eventKey={index} title={name}>
+                <TabContent 
+                    type={props.type}
+                    contentList={props.contentList[activeTab]}
+                />
+            </Tab>
         );
-    }
+    });
+    return (
+        <div className={props.type + "-desktop"}>
+            <Tabs 
+                activeKey={activeTab}
+                onSelect={(selectedTab) => setActiveTab(selectedTab)}
+                className="justify-content-center"
+            >
+                {tabItems}
+            </Tabs>
+        </div>
+    );
 }
 
 function TabContent(props) {
