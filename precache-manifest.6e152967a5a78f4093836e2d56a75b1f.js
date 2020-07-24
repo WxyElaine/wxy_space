@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bfbbc7419b4fea7cd6188ba123a82e3f",
+    "revision": "cba8294699916c5a3fdc1ef6483f9d40",
     "url": "/wxy_space/index.html"
   },
   {
-    "revision": "27ed3a015c4d22bb0dd0",
+    "revision": "c7ca10d489098fd3a4a4",
     "url": "/wxy_space/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "cf87966863d5e22f4c69",
+    "revision": "f1bd427ac752333ac474",
     "url": "/wxy_space/static/css/main.46f7d1fb.chunk.css"
   },
   {
-    "revision": "27ed3a015c4d22bb0dd0",
-    "url": "/wxy_space/static/js/2.b69c1fd2.chunk.js"
+    "revision": "c7ca10d489098fd3a4a4",
+    "url": "/wxy_space/static/js/2.4dc7aeea.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/wxy_space/static/js/2.b69c1fd2.chunk.js.LICENSE.txt"
+    "url": "/wxy_space/static/js/2.4dc7aeea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf87966863d5e22f4c69",
-    "url": "/wxy_space/static/js/main.77e5b123.chunk.js"
+    "revision": "f1bd427ac752333ac474",
+    "url": "/wxy_space/static/js/main.53e0d15c.chunk.js"
   },
   {
     "revision": "63016cb68029c13e44f9",
@@ -94,6 +94,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "22562e9b131eebeb0de481b74481fc3c",
     "url": "/wxy_space/static/media/milky-way-galaxy-in-hawaii.22562e9b.jpg"
+  },
+  {
+    "revision": "3b5ca0f05046dff7d0da3a005df335ce",
+    "url": "/wxy_space/static/media/milky-way-galaxy-in-tibet-panorama.3b5ca0f0.jpg"
   },
   {
     "revision": "04ae31808c811dd1fc2aaac0256ea053",
