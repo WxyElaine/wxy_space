@@ -1,35 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a792c23a78ded1529350801fa58e782f",
+    "revision": "d924487258f8326852964834e63aea02",
     "url": "/wxy_space/index.html"
   },
   {
-    "revision": "3a5705e5a7accdb8eba8",
+    "revision": "b2d6f75b5ec60152a646",
     "url": "/wxy_space/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "1b84ca8a9e9e833f9359",
+    "revision": "0194fc6ccb7f16fea35e",
     "url": "/wxy_space/static/css/main.46f7d1fb.chunk.css"
   },
   {
-    "revision": "3a5705e5a7accdb8eba8",
-    "url": "/wxy_space/static/js/2.3a451808.chunk.js"
+    "revision": "b2d6f75b5ec60152a646",
+    "url": "/wxy_space/static/js/2.ee811713.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/wxy_space/static/js/2.3a451808.chunk.js.LICENSE.txt"
+    "url": "/wxy_space/static/js/2.ee811713.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1b84ca8a9e9e833f9359",
-    "url": "/wxy_space/static/js/main.bd66adba.chunk.js"
+    "revision": "0194fc6ccb7f16fea35e",
+    "url": "/wxy_space/static/js/main.5266212f.chunk.js"
   },
   {
     "revision": "63016cb68029c13e44f9",
     "url": "/wxy_space/static/js/runtime-main.627ca0ed.js"
   },
   {
+    "revision": "d590b48f8d9274663a2003b2618f1599",
+    "url": "/wxy_space/static/media/aurora-in-alaska0.d590b48f.jpg"
+  },
+  {
     "revision": "2b92370e7a2134a4b595dcca2bad45ac",
-    "url": "/wxy_space/static/media/aurora-in-alaska.2b92370e.jpg"
+    "url": "/wxy_space/static/media/aurora-in-alaska1.2b92370e.jpg"
   },
   {
     "revision": "06dc7eec75ec9e80a2ccc7b937549b92",
@@ -94,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "22562e9b131eebeb0de481b74481fc3c",
     "url": "/wxy_space/static/media/milky-way-galaxy-in-hawaii.22562e9b.jpg"
+  },
+  {
+    "revision": "fb723e7fa6740e43936e04f63a7d9e66",
+    "url": "/wxy_space/static/media/milky-way-galaxy-in-leavenworth.fb723e7f.jpg"
   },
   {
     "revision": "d9a31b4f04fe249ff07e54dce6533e0f",
