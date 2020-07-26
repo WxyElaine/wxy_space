@@ -39,8 +39,10 @@ export const PhotographyItems = [
     {src: require('./photography/mountains-in-tibet.jpg'), width: 3, height: 2},
     {src: require('./photography/mountains-in-alaska.jpg'), width: 3, height: 2},
     {src: require('./photography/la-push-woods.jpg'), width: 3, height: 2},
-    {src: require('./photography/aurora-in-alaska.jpg'), width: 3, height: 2},
+    {src: require('./photography/aurora-in-alaska0.jpg'), width: 3, height: 2},
+    {src: require('./photography/aurora-in-alaska1.jpg'), width: 3, height: 2},
     {src: require('./photography/milky-way-galaxy-in-hawaii.jpg'), width: 5, height: 7},
     {src: require('./photography/milky-way-galaxy-in-tibet.jpg'), width: 3, height: 2},
+    {src: require('./photography/milky-way-galaxy-in-leavenworth.jpg'), width: 3, height: 2},
     {src: require('./photography/milky-way-galaxy-in-tibet-panorama.jpg'), width: 5, height: 7}
 ];
