@@ -76,11 +76,11 @@ a {
 }
 
 .introCardMask {
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 #xinyiCardMask {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0) 30%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 30%);
 }
 
 /* Tabs for CV and Artwork */
@@ -127,7 +127,8 @@ a {
   }
 }
 
-.btn-link, .btn-link:active {
+.btn-link,
+.btn-link:active {
   color: #6b2b87;
 }
 
@@ -154,7 +155,8 @@ a {
 /* Copyright */
 #copyright {
   color: #acb1e5;
-  font-size: 0.7em;;
+  font-size: 0.7em;
+  ;
   margin-top: 1.5rem;
 }
 
@@ -166,4 +168,10 @@ a {
 #contactLogoContainer {
   margin: auto;
   width: 40%;
+}
+
+/* Maintenance */
+#maintenance {
+  margin-top: 15rem;
+  color: #6b2b87;
 }

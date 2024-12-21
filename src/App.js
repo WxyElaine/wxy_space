@@ -18,7 +18,8 @@ import './App.css';
 
 import {
   Education, Skills, RecentAppointments, ResearchExperience, Publications, Awards,
-  Presentations, Projects, Activities} from './cv';
+  Presentations, Projects, Activities
+} from './cv';
 
 import {
   GatesCenter, Xian, Xinyi, XinyiAndCamera, PhotographyItems, PapercuttingItems, PaintingItems
@@ -32,13 +33,13 @@ function Navigation() {
   return (
     <Navbar variant="dark" expand="md" fixed="top">
       <Navbar.Brand href="#intro">
-      <img
-        src={logoWhite}
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt="Xinyi's logo"
-      />{' '}
+        <img
+          src={logoWhite}
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+          alt="Xinyi's logo"
+        />{' '}
         Xinyi&#39;s Portfolio
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -56,16 +57,16 @@ function Navigation() {
 function Intro() {
   const hometownImgRef = <span>Background image painted by Xinyi Wang.</span>;
   const eduImgLink = <a href="https://news.cs.washington.edu/2019/03/01/allen-school-celebrates-dedication-of-the-new-bill-melinda-gates-center-for-computer-science-engineering/">Website of Paul G. Allen School of Computer Science and Engineering</a>;
-  const eduImgRef = <span>Photo credit: Mark Stone/University of Washington.<br/>Source: {eduImgLink}</span>;
+  const eduImgRef = <span>Photo credit: Mark Stone/University of Washington.<br />Source: {eduImgLink}</span>;
 
-  return(
+  return (
     <Jumbotron fluid id="intro">
       <Container>
         <Row xs={1} sm={1} md={2}>
           <IntroCard
             id="xinyiCardMask"
             imgSrc={Xinyi}
-            title={<span id="name">Xinyi Wang<br/><span id="chineseName">(王心怡)</span></span>}
+            title={<span id="name">Xinyi Wang<br /><span id="chineseName">(王心怡)</span></span>}
           />
           <IntroCard
             imgSrc={Xian}
@@ -87,7 +88,7 @@ function Intro() {
           <IntroCard
             imgSrc={XinyiAndCamera}
             title="Interests"
-            text="Love photography, paper-cutting and paper-carving, painting, star-gazing and traveling."
+            text="Love photography, paper-cutting and paper-carving, painting, star-gazing and travelling."
             btnHref="#artwork"
             btnText="See my artwork"
           />
@@ -177,22 +178,34 @@ function Contact() {
         <h2>CONTACT</h2>
         <p>Email: wxyelaine98@gmail.com</p>
         <Row id="contactLogoContainer">
-          <Col><a href="https://github.com/WxyElaine"><Image className="contactLogo" src={githubLogo} fluid/></a></Col>
-          <Col><a href="https://www.linkedin.com/in/xinyi-wang-148919119/"><Image className="contactLogo" src={linkedInLogo} fluid/></a></Col>
+          <Col><a href="https://github.com/WxyElaine"><Image className="contactLogo" src={githubLogo} fluid /></a></Col>
+          <Col><a href="https://www.linkedin.com/in/xinyi-wang-148919119/"><Image className="contactLogo" src={linkedInLogo} fluid /></a></Col>
         </Row>
       </Container>
     </Jumbotron>
   );
 }
 
+function Maintenance() {
+  return (
+    <Jumbotron id="maintenance">
+      <Container>
+        <h2>This website is unavailable at this time.</h2>
+      </Container>
+    </Jumbotron>
+  );
+}
+
+
 function App() {
   return (
     <div className="App bg-light">
       <Navigation />
-      <Intro />
+      <Maintenance />
+      {/* <Intro />
       <CV />
       <Artwork />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }
